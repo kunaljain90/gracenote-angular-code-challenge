@@ -1,6 +1,16 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MedalsByParticipantsComponent } from './medals-by-participants.component';
+import { of } from 'rxjs';
+import { MedalService } from '../medal.service';
+
+class MockMedalService {
+
+  getMedalsByParticipants () {
+    return of([]);
+  }
+}
+
 
 describe('MedalsByParticipantsComponent', () => {
   let component: MedalsByParticipantsComponent;
@@ -8,7 +18,10 @@ describe('MedalsByParticipantsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MedalsByParticipantsComponent ]
+      declarations: [ MedalsByParticipantsComponent ],
+      providers: [
+        { provide: MedalService, useClass: MockMedalService }
+      ]
     })
     .compileComponents();
   }));

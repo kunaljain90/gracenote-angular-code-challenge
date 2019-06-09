@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { MedalService, MedalSummary } from '../medal.service';
+import { MedalService } from '../medal.service';
 import { Observable } from 'rxjs';
+import { MedalSummary } from '../models/medal-summary';
 
 @Component({
   selector: 'app-medals-country-summary',

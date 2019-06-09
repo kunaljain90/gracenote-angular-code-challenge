@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { MedalService, MedalsBySportsType } from '../medal.service';
+import { MedalService } from '../medal.service';
 import { Observable } from 'rxjs';
+import { MedalsBySportsType } from '../models/medals-by-sports-type';
 
 @Component({
   selector: 'app-medals-sports-type',

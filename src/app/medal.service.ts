@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
+import { MedalSummary } from './models/medal-summary';
+import { MedalsBySportsType } from './models/medals-by-sports-type';
 
 @Injectable({
   providedIn: 'root'
@@ -56,23 +58,4 @@ export class MedalService {
       }),
     );
   }
-}
-
- export class MedalSummary {
-  id: number;
-  name: string;
-  total: number;
-  gold: number;
-  silver: number;
-  bronze: number;
-}
-
-export class MedalsBySportsType {
-  id: number;
-  name: string;
-  total: number;
-  gold: number;
-  silver: number;
-  bronze: number;
-
 }

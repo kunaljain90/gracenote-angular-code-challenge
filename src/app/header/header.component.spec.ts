@@ -22,4 +22,12 @@ describe('HeaderComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should have an Title "Winter Olympics Medal Tally"', () => {
+    const fixture = TestBed.createComponent(HeaderComponent);
+    fixture.detectChanges();
+    const compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('.app-title').textContent).toContain('Winter Olympics Medal Tally');
+  });
+
 });

@@ -5,9 +5,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-import {
-  MatToolbarModule, MatTableModule, MatPaginatorModule, MatSortModule
-} from '@angular/material';
 import { MedalsTableComponent } from './medals-table/medals-table.component';
 import { MedalsCountrySummaryComponent } from './medals-country-summary/medals-country-summary.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -26,11 +23,7 @@ import { MedalsByParticipantsComponent } from './medals-by-participants/medals-b
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MatToolbarModule,
     HttpClientModule,
-    MatTableModule,
-    MatPaginatorModule,
-    MatSortModule,
     BrowserAnimationsModule
   ],
   providers: [],
