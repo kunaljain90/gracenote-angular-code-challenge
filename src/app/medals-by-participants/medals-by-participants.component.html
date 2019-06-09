@@ -1,0 +1,70 @@
+<div *ngFor="let sport of medalsBySports$ | async">
+
+<h6 class="text-center mt-4 mb-4"><i>Participants - {{sport.Sport.c_Name}}</i></h6>
+
+  <table class="table table-striped table-bordered table-dark table-hover text-center">
+    <thead>
+        <tr>
+            <td>
+              Participant Name / Team
+            </td>
+            <td>
+              Event
+            </td>
+            <td>
+              Gender
+            </td>
+            <td>
+              Medal Type
+            </td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let sportData of sport.GoldMedalList">
+            <td>
+                {{sportData.Participant.c_Participant}}
+            </td>
+            <td>
+                {{sportData.Event.c_Name}}
+            </td>
+            <td>
+                {{sportData.Gender.c_Name}} 
+            </td>
+            <td>
+                Gold
+            </td>
+        </tr>
+
+        <tr *ngFor="let sportData of sport.SilverMedalList">
+          <td>
+              {{sportData.Participant.c_Participant}}
+          </td>
+          <td>
+              {{sportData.Event.c_Name}}
+          </td>
+          <td>
+              {{sportData.Gender.c_Name}} 
+          </td>
+          <td>
+              Silver
+          </td>
+      </tr>
+
+      <tr *ngFor="let sportData of sport.BronzeMedalList">
+        <td>
+            {{sportData.Participant.c_Participant}}
+        </td>
+        <td>
+            {{sportData.Event.c_Name}}
+        </td>
+        <td>
+            {{sportData.Gender.c_Name}} 
+        </td>
+        <td>
+            Bronze
+        </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
